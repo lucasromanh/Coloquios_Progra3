@@ -1,36 +1,42 @@
 @import 'bulma/css/bulma.css';
 
+/* Aquí puedes añadir tus estilos personalizados */
+
+/* Estilos para el contenedor principal */
 .container {
   padding: 20px;
 }
 
+/* Estilos para los botones */
 .button {
   margin-top: 10px;
   margin-right: 10px;
 }
 
+/* Estilos para los elementos de alerta */
 .alert {
   position: fixed;
-  bottom: -100px; 
+  bottom: -100px;  /* Posición inicial fuera de la vista */
   right: 20px;
-  background-color: #9254f594;  
+  background-color: #209cee;  /* Color celeste */
   color: white;
   z-index: 1000;
   opacity: 1;
-  transition: bottom 0.7s ease-in-out, opacity 0.8s ease-in-out;
+  transition: bottom 0.3s ease-in-out, opacity 0.5s ease-in-out;
   padding: 15px;
   border-radius: 5px;
 }
 
 .alert.show {
-  bottom: 20px;  
+  bottom: 20px;  /* Posición visible */
 }
 
 .alert.hide {
   opacity: 0;
-  bottom: -100px;  
+  bottom: -100px;  /* Posición final fuera de la vista */
 }
 
+/* Estilos para los productos */
 .product-item {
   margin-bottom: 20px;
 }
@@ -45,6 +51,7 @@
   height: auto;
 }
 
+/* Estilos para los comentarios */
 .comment {
   border: 1px solid #dbdbdb;
   border-radius: 5px;
@@ -63,6 +70,7 @@
   margin-bottom: 10px;
 }
 
+/* Estilos para el modal */
 .modal-content {
   background: white;
   padding: 20px;
@@ -77,8 +85,41 @@
   margin-top: 10px;
 }
 
+/* Personalizar el aspecto de los botones de cierre */
 .delete {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .alert {
+  background-color: #333;
+}
+
+body.dark-mode .comment {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+body.dark-mode .modal-content {
+  background-color: #333;
+}
+
+body.dark-mode .button.is-info {
+  background-color: #209cee;
+  color: #fff;
+}
+
+body.dark-mode .product-item img {
+  filter: brightness(0.8);
 }

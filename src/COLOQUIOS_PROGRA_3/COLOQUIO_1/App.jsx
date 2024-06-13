@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Alert, Comment, Modal, ProductItem } from './components';
-import './index.css';
+import './styles/main.css';
 
 const App = () => {
   const [cart, setCart] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
@@ -15,8 +16,20 @@ const App = () => {
   const handleCloseModal = () => setShowModal(false);
   const handleCloseAlert = () => setShowAlert(false);
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  };
+
   return (
     <div className="container">
+      <button className="button is-info" onClick={toggleDarkMode}>
+        {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
+      </button>
       <ProductItem
         name="Rick Pickle"
         price={29.99}
@@ -26,7 +39,7 @@ const App = () => {
       <Comment
         username="Lucas Roman"
         content="Esto es Pepinillo rick de edición limitada"
-        date={new Date()}
+        date={new Date().toLocaleDateString()}
       />
       <button className="button is-info" onClick={() => setShowModal(true)}>Ver Modal</button>
       {showModal && (
