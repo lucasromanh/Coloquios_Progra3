@@ -57,11 +57,13 @@ Para ejecutar los proyectos de los coloquios, utiliza los siguientes comandos:
 
 ```bash
 npm run dev:coloquio1
+```
 
 ### Coloquio 2:
 
 ```bash
 npm run dev:coloquio2
+```
 
 ## Configuración en Caso de Mover Archivos
 

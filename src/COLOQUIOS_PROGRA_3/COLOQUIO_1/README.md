@@ -2,6 +2,8 @@
 
 Este directorio contiene el proyecto del Coloquio 1 desarrollado como parte de los coloquios de Programación 3 utilizando React y Vite. El objetivo de este coloquio es practicar la creación de componentes sin estado en React.
 
+![Pepinillo Rick](./pepinillorick.png)
+
 ## Componentes
 
 ### ProductItem
