@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-const coloquio = process.env.COLOQUIO || 'COLOQUIO_1'; 
+const coloquio = process.env.COLOQUIO || 'COLOQUIO_1';
 
 export default defineConfig({
   plugins: [react()],
@@ -12,8 +12,7 @@ export default defineConfig({
   },
   server: {
     fs: {
-      allow: ['..'] 
+      allow: ['..']
     }
   }
 });
-
