@@ -110,3 +110,5 @@ Si necesitas mover archivos o cambiar la estructura de directorios, asegúrate d
 ## Contacto
 
 Para cualquier duda, puedes contactarme o buscarme como lucasromanh.
+
+![Pepinillo Rick](./pepinillorick.png)
